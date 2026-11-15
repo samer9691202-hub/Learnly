@@ -6,16 +6,16 @@
   <meta name="theme-color" content="#191A1B">
   <meta name="description" content="MADAR — مساحة عربية لتنظيم المهام والملاحظات والتذكيرات">
   <title>MADAR | مدار</title>
-  <link rel="manifest" href="/manifest.webmanifest">
-  <link rel="icon" href="/assets/icon-192.png" type="image/png">
-  <link rel="preload" as="image" href="/assets/madar-logo.png">
-  <link rel="apple-touch-icon" href="/assets/icon-192.png">
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./assets/icon-192.png" type="image/png">
+  <link rel="preload" as="image" href="./assets/madar-logo.png">
+  <link rel="apple-touch-icon" href="./assets/icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <div id="lockScreen" class="lock-screen hidden">
     <div class="lock-card">
-      <img class="brand-logo brand-logo-large" src="/assets/madar-logo.png" data-logo-light="/assets/madar-logo.png" data-logo-dark="/assets/madar-logo-dark.png" data-logo-fallback="/assets/madar-logo-fallback.png" alt="MADAR" width="1344" height="172" decoding="async" fetchpriority="high">
+      <img class="brand-logo brand-logo-large" src="./assets/madar-logo.png" data-logo-light="./assets/madar-logo.png" data-logo-dark="./assets/madar-logo-dark.png" data-logo-fallback="./assets/madar-logo-fallback.png" alt="MADAR" width="1344" height="172" decoding="async" fetchpriority="high">
       <h1>مرحباً بعودتك</h1>
       <p>أدخل رمز PIN لفتح مساحة العمل</p>
       <input id="unlockPin" class="pin-input" type="password" inputmode="numeric" maxlength="8" placeholder="••••" aria-label="رمز PIN">
@@ -29,8 +29,10 @@
     <button class="sidebar-backdrop" id="sidebarBackdrop" aria-label="إغلاق القائمة"></button>
     <aside class="sidebar" id="sidebar" aria-label="القائمة الجانبية">
       <div class="brand">
-        <img class="brand-logo" src="/assets/madar-logo.png" data-logo-light="/assets/madar-logo.png" data-logo-dark="/assets/madar-logo-dark.png" data-logo-fallback="/assets/madar-logo-fallback.png" alt="MADAR" width="1344" height="172" decoding="async" fetchpriority="high">
-        <div class="brand-name">MADAR<span>خطط بهدوء، وأنجز بوضوح</span></div>
+        <div class="brand-identity">
+          <img class="brand-logo" src="./assets/madar-logo.png" data-logo-light="./assets/madar-logo.png" data-logo-dark="./assets/madar-logo-dark.png" data-logo-fallback="./assets/madar-logo-fallback.png" alt="MADAR" width="1344" height="172" decoding="async" fetchpriority="high">
+          <div class="brand-name"><span>خطط بهدوء، وأنجز بوضوح</span></div>
+        </div>
         <div class="sidebar-controls"><button class="icon-btn collapse-btn" id="collapseSidebar" type="button" aria-label="طي القائمة" aria-expanded="true" title="طي القائمة">‹</button><button class="icon-btn sidebar-close" id="closeSidebar" type="button" aria-label="إغلاق القائمة">×</button></div>
       </div>
       <nav class="main-nav" aria-label="التنقل الرئيسي">
@@ -199,6 +201,6 @@
     </section>
   </div>
   <div class="toast-region" id="toastRegion" aria-live="polite"></div>
-  <script src="/app.js" defer></script>
+  <script src="./app.js" defer></script>
 </body>
 </html>

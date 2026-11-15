@@ -62,3 +62,10 @@
 5. اختبر `https://YOUR-DOMAIN/index.html` و`https://YOUR-DOMAIN/assets/madar-logo.png`؛ يجب أن يعيدا الصفحة والصورة، لا صفحة 404.
 
 **تنبيه:** تعديل الملفات وحده لا يغيّر النسخة المنشورة على Vercel. يجب رفع هذه الملفات إلى مصدر المشروع ثم تنفيذ Redeploy. لا أملك صلاحية الدخول إلى حساب Vercel لديك، لذلك لم أزعم أن النشر تم من هنا.
+
+
+## Website logo loading fix (November 2026)
+- Changed asset references to relative paths for root and subpath deployments.
+- Bumped the service-worker cache to v11 to invalidate older cached shell assets.
+- Logo requests now use network-first behavior, with cache fallback only when offline.
+- Keep `index.html`, `vercel.json`, `app.js`, `sw.js`, `styles.css`, `manifest.webmanifest`, and `assets/` together in the Vercel Root Directory.

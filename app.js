@@ -119,6 +119,6 @@ $("#unlockBtn").onclick=async()=>{let p=$("#unlockPin").value;if(await hashPin(p
 $("#clearDataBtn").onclick=async()=>{if(!await appConfirm("سيؤدي هذا الإجراء إلى حذف جميع المهام والملاحظات والعناصر والتذكيرات نهائياً من هذا الجهاز. لا يمكن التراجع عنه.","مسح جميع البيانات","danger"))return;const word=await appPrompt("للتأكيد النهائي، اكتب كلمة حذف كما هي.","تأكيد نهائي");if(word==="حذف"){data={tasks:[],notes:[],entries:[],reminders:[]};save();toast("تم مسح البيانات")}else if(word!==null)await appAlert("لم تتم عملية المسح؛ كلمة التأكيد غير مطابقة.","لم يتم المسح","warning")};
 $("#globalSearch").onkeydown=e=>{if(e.key==="Enter"){let q=e.target.value.trim();if(!q)return;nav("tasks");$("#taskFilter").value="all";$("#priorityFilter").value="all";$("#tasksContainer").innerHTML=activeTasks().filter(t=>t.title.includes(q)).map(t=>taskRow(t)).join("")||empty("لا توجد نتائج.")}};
 window.addEventListener("online",()=>$("#connectionText").textContent="متصل");window.addEventListener("offline",()=>$("#connectionText").textContent="دون إنترنت");
-if("serviceWorker"in navigator&&location.protocol!=="file:")window.addEventListener("load",()=>navigator.serviceWorker.register("/sw.js",{scope:"/"}).catch(()=>{}));
+if("serviceWorker"in navigator&&location.protocol!=="file:")window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js",{scope:"./"}).catch(()=>{}));
 applyTheme();renderSettings();tick();setInterval(tick,1000);renderAll();if(localStorage.getItem(PINKEY))showLock();
 })();
